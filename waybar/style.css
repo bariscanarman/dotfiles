@@ -1,0 +1,158 @@
+@import 'colors/orange.css';
+@keyframes blink {
+    to {
+        background-color: @red; /* Yanıp sönerkenki arka plan rengi */
+        color: #000000;            /* Yanıp sönerkenki yazı rengi */
+    }
+}
+
+* {
+    border: none;
+    border-radius: 0px;
+
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Adwaita Sans", "JetBrainsMono Nerd Font Propo", sans-serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+tooltip {
+    background: @bg0;
+    border: 1px solid @bg3;
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: @fg;
+    padding: 6px;
+}
+
+#workspaces {
+    background-color: @orange;
+    padding: 5px 3px;
+    margin: 0 0 0 12px;
+    border-radius: 18px;
+    border: 1px solid @bg0;
+    color: @gf;
+}
+
+#workspaces button {
+    padding: 0px 6px;
+    margin: 0px 3px;
+    border-radius: 50px;
+    color: @white;
+    background-color: @yellow;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    background-color: transparent;
+    color: @bg0;
+    min-width: 50px;
+    transition: all 0.3s ease-in-out;
+    font-size: 13px;
+}
+
+#workspaces button:hover {
+    background-color: @orange;
+    color: @bg0;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+    color: @bg0;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+#backlight {
+    background-color: @orange;
+    color: #eceff4;             
+    padding: 0 10px;            
+    border-radius: 10px;       
+    margin: 5px 5px;            
+    font-weight: bold;
+}
+
+#backlight,
+#battery,
+#pulseaudio,
+#network,
+#clock,
+#custom-notification {
+    background-color: @orange;
+    padding: 0 15px 0 15px;
+    margin: 0 0 0 10px;
+    border-radius: 50px;
+    border: 1px solid @bg1;
+    margin-right: 15px;
+    margin-left: 5px; 
+    padding: 0 10px;
+    
+}
+
+#clock {
+    color: @white;
+}
+
+#custom-notification {
+    color: @white;
+}
+
+#pulseaudio {
+    color: @white;
+}
+
+#network {
+    color: @white;
+    padding: 0 10px;
+    background-color: @orange;
+    border-radius: 15px;
+    margin: 4px 2px;
+}
+
+#battery {
+    color: @white;
+}
+
+#bluetooth {
+        background-color: @orange;
+        color: #eceff4;
+        padding: 0 10px;
+        border-radius: 18px;
+        margin-right: 5px;
+        margin-left: 1px;
+    }
+
+    #bluetooth.off {
+        background-color: #4c566a;
+        color: #d8dee9;
+    }
+#battery.critical:not(.charging) {
+    color: @white;              
+    animation-name: blink;      
+    animation-duration: 2.5s;    
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-color: @orange;
+}
+#battery.charging, #battery.plugged {
+    color: @white;              
+    animation: none;             
+    background-color: @green;
+}
