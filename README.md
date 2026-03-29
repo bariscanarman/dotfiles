@@ -7,10 +7,15 @@ This repository contains my personal configuration files (dotfiles) for Arch Lin
 🖥️ System Overview
 
 > **OS:** Arch Linux (The ultimate playground for kernel-level exploration)
+>
 > **WM:** Hyprland (Dynamic tiling Wayland compositor)
+>
 > **Terminal:** Kitty (GPU-accelerated for maximum performance)
+>
 > **Shell:** Zsh / Bash with custom configurations
+>
 > **Bar:** Waybar (Minimalist and informative, not using it rn)
+>
 > **App Launcher:** Rofi (Wayland-fork)
 
 📁 Key Configurations
